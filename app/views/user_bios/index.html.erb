@@ -1,11 +1,39 @@
 <%=render 'partials/navbar' %>
-<h1>UserBios</h1>
-<%= link_to "Create", new_user_bio_path %>
-<%= link_to "Edit", edit_user_bio_path(@user_bio) %>
-       <br>
-        <%= @user_bio.first_name%>  <%= @user_bio.last_name%><br>
+<h1> <%= @user_bio.first_name%>  <%= @user_bio.last_name%> </h1>
+<% if @user_bio.nil?  %>
+    <%= link_to "Create", new_user_bio_path %>
+<% else %>
+    <%= link_to "Edit", edit_user_bio_path(@user_bio) %>
+<% end %>
+      
+<br>
         <%= @user_bio.email%><br>
         <%= @user_bio.phone%><br>
         <%= @user_bio.bio%><br>
+
+        <%= link_to "Add post", new_user_bio_post_path(@user_bio) %>
+        
+        <div class="grid">
+        <div class="ui equal width grid">
+          <div class="column">Post</div>
+          <div class="column"></div>
+          <div class="column"></div>
+        </div>
+
+        <% @user_bio.posts.each do |post| %>
+
+            <div class="ui equal width grid">
+              <div class="column"><%= link_to post.body, [@user_bio,post] %></div>
+              <div class="column"> <%= link_to 'Edit', edit_user_bio_post_path(@user_bio, post) %> </div>
+              <div class="column"> <%= link_to 'Delete', [@user_bio,post], method: :delete, data: { confirm: "Are you sure?" }  %> 
+                </div>
+              <div id="likeBtn" class="ui labeled button" tabindex="0">
+              <div class="ui red button"> <i class="heart icon"></i></div>
+       
+              </div>
+            </div>
+            <%end%>
+
+
 
             

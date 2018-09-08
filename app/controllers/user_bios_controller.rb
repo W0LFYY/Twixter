@@ -17,7 +17,7 @@ class UserBiosController < ApplicationController
 
   def update
     if @user_bio.update(bio_params)
-      redirect_to @user_bio
+      redirect_to user_bios_path
     else
       render :edit
     end
