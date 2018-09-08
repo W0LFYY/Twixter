@@ -72,7 +72,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    commonjs (0.2.7)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
     devise (4.5.0)
@@ -86,22 +85,12 @@ GEM
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    grease (0.3.1)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
-    less (2.6.0)
-      commonjs (~> 0.2.7)
-    less-rails (3.0.0)
-      actionpack (>= 4.0)
-      grease
-      less (~> 2.6.0)
-      sprockets (> 2, < 4)
-      tilt
-    libv8 (3.16.14.19)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -161,7 +150,6 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    ref (2.0.0)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
@@ -181,10 +169,8 @@ GEM
     selenium-webdriver (3.14.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
-    semantic-ui (0.0.1)
-      less-rails
-      railties
-      therubyracer
+    semantic-ui-sass (2.3.1.2)
+      sass (>= 3.2)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -197,9 +183,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    therubyracer (0.12.3)
-      libv8 (~> 3.16.14.15)
-      ref
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
@@ -240,7 +223,7 @@ DEPENDENCIES
   rails (~> 5.2.1)
   sass-rails (~> 5.0)
   selenium-webdriver
-  semantic-ui
+  semantic-ui-sass
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
@@ -252,4 +235,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.2
+   1.16.4
