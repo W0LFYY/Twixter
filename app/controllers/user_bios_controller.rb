@@ -1,7 +1,7 @@
 class UserBiosController < ApplicationController
   before_action :set_bio, only: [:show, :update, :edit, :destroy]
   def index
-    @user_bio = UserBio.first
+    @user_bio = current_user.user_bio
   end
 
   def show

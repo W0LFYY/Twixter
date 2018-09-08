@@ -1,3 +1,10 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
-<!-- add comments -->
+
+
+<h3><%= @post.body %></h3>
+
+<%= link_to "Add comment", new_post_comment_path(@post) %>
+<h2>Comments</h2>
+    <% @post.comments.each do |comment| %>
+      <%= render 'comments/comment', { comment: comment } %>
+      <div class="column"> <%= link_to 'Delete', user_bio_post_path(@post), method: :delete %> 
+<% end %> 
