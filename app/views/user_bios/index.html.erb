@@ -1,5 +1,4 @@
-<%=render 'partials/navbar' %>
-
+<h1> <%= @user_bio.first_name%>  <%= @user_bio.last_name%> </h1>
 <% if @user_bio.nil?  %>
     <%= link_to "Create", new_user_bio_path %>
 <% else %>
