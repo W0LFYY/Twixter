@@ -1,14 +1,14 @@
 class UserBiosController < ApplicationController
   before_action :set_bio, only: [:show, :update, :edit, :destroy]
   def index
-    @user_bios = UserBio.all
+    @user_bio = UserBio.first
   end
 
   def show
   end
 
   def new
-    @user_bio = UserBio.new
+     @user_bio = UserBio.new
     render partial: 'form'
   end
 

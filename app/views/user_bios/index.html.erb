@@ -1,8 +1,11 @@
 <%=render 'partials/navbar' %>
 <h1>UserBios</h1>
-<%= link_to "Create New Bio", new_user_bio_path %>
-    <ul>
-        <% @user_bios.each do |userbio| %>
-        <li><%= link_to user_bio.first_name, user_bio %></li>
-        <%end%>        
-        </ul>
+<%= link_to "Create", new_user_bio_path %>
+<%= link_to "Edit", edit_user_bio_path(@user_bio) %>
+       <br>
+        <%= @user_bio.first_name%>  <%= @user_bio.last_name%><br>
+        <%= @user_bio.email%><br>
+        <%= @user_bio.phone%><br>
+        <%= @user_bio.bio%><br>
+
+            
