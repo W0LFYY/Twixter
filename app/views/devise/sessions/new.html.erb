@@ -1,5 +1,5 @@
-<h2>Log in</h2>
-<div class="ui form">
+<h2 id='form_name'>Log in</h2>
+<div class="ui small form" id='linform'>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
       <%= f.label :email %><br />
@@ -18,8 +18,8 @@
       </div>
     <% end -%>
 
-    <div class="actions">
-      <%= f.submit "Log in" %>
+    <div class="actions" id="loginbutton">
+      <%= f.submit "Log in", {class: 'ui blue button'} %>
     </div>
   <% end %>
   </div>
