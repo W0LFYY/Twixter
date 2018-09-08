@@ -23,8 +23,9 @@ class UserBiosController < ApplicationController
     end
   end
 
+
   def create
-    @user_bio = UserBio.new(bio_params)
+    @user_bio = current_user.create_user_bio(bio_params)
     if @user_bio.save
       redirect_to user_bios_path
     else
@@ -38,6 +39,10 @@ class UserBiosController < ApplicationController
   end
 
   private 
+  def set_user
+    @user = current_user
+  end
+    
     def set_bio
       @user_bio = UserBio.find(params[:id])
     end
