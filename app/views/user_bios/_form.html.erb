@@ -1,0 +1,23 @@
+<h1><%= @user_bio.id ? 'Edit Bio' : 'Create Bio' %></h1>
+<hr />
+<%= form_for @user_bio do |f| %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, required: true, autofocus: true%>
+
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, required: true, autofocus: true%>
+
+    <%= f.label :location %>
+    <%= f.text_field :location, required: true, autofocus: true%>
+
+    <%= f.label :phone %>
+    <%= f.text_field :phone, required: true, autofocus: true%>
+
+    <%= f.label :email %>
+    <%= f.text_field :email, required: true, autofocus: true%>
+
+    <%= f.label :bio %>
+    <%= f.text_field :bio, required: true, autofocus: true%>
+
+    <%= f.submit %>
+    <% end %>
