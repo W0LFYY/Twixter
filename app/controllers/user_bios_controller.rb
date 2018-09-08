@@ -9,7 +9,7 @@ class UserBiosController < ApplicationController
 
   def new
      @user_bio = UserBio.new
-    render partial: 'form'
+    #render partial: 'form'
   end
 
   def edit
